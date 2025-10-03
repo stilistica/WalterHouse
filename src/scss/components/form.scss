@@ -1,0 +1,178 @@
+@use "../base/globals.scss" as s;
+
+.main-form {
+  @media (min-width: s.$media_1440) {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+  }
+}
+.form {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 45px 40px 60px 40px;
+  @include s.d-flex($direction: column, $align: center);
+  gap: 17px;
+  &__input {
+    width: 100%;
+    max-width: 400px;
+    input {
+      border: none;
+      width: 100%;
+
+      font-weight: 400;
+      font-size: 14px;
+      color: s.$color__black;
+
+      padding: 9px 0;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+
+      transition: all 0.5s ease;
+      &::placeholder {
+        font-weight: 400;
+        font-size: 14px;
+        color: s.$color__black;
+      }
+      &:focus {
+        outline: none;
+        border-bottom: 1px solid s.$color__gold;
+      }
+      &.err {
+        border-bottom: 1px solid s.$color__red;
+      }
+    }
+    & .err-mess {
+      font-weight: 400;
+      font-size: 9px;
+      color: s.$color__red;
+    }
+  }
+
+  button {
+    margin-top: 5px;
+    @include s.d-flex($align: center, $justify: center);
+    background: transparent;
+    border: none;
+    p {
+      width: 140px;
+      font-weight: 500;
+      font-size: 14px;
+      letter-spacing: 0.45em;
+      text-transform: uppercase;
+      color: s.$color__gold;
+      text-align: left;
+
+      transition: color 0.5s ease;
+    }
+    svg {
+      fill: transparent;
+      stroke: s.$color__gold;
+      width: 100px;
+      height: 22px;
+
+      transition: stroke 0.5s ease;
+      use {
+        width: 100px;
+        height: 22px;
+      }
+    }
+
+    &:hover {
+      p {
+        color: s.$color__hover;
+      }
+      svg {
+        stroke: s.$color__hover;
+      }
+    }
+  }
+
+  // ------------------- 768 -----------------
+  @media (min-width: s.$media_768) {
+    width: 100%;
+    padding: 90px 124.5px 90px 124.5px;
+    gap: 27px;
+    &__input {
+      max-width: 700px;
+      input {
+        padding: 18px 0;
+
+        font-size: 18px;
+
+        &::placeholder {
+          font-size: 18px;
+        }
+      }
+      & .err-mess {
+        font-size: 12px;
+      }
+    }
+    button {
+      margin-top: 25px;
+      padding: 0;
+      // width: 519px;
+      @include s.d-flex($align: center, $justify: space-between);
+      gap: 25px;
+      p {
+        width: auto;
+        font-size: 20px;
+      }
+      svg {
+        width: 160px;
+        height: 22px;
+        margin-right: -25px;
+        use {
+          width: 160px;
+        }
+      }
+    }
+  }
+
+  // ------------------- 1440 -----------------
+  @media (min-width: s.$media_1440) {
+    background: s.$color__white;
+    // width: 740px;
+    width: 680px;
+    // height: 380px;
+    height: 330px;
+    padding: 87px 120px 80px 120px;
+    padding: 67px 100px 60px 100px;
+    gap: 26px;
+    &__input {
+      max-width: none;
+
+      input {
+        max-width: none;
+        padding: 16px 0;
+      }
+    }
+    button {
+      margin-top: 23px;
+      width: 100%;
+      @include s.d-flex($align: center, $justify: space-between);
+      // gap: 15px;
+      gap: 0;
+      p {
+        width: auto;
+      }
+      svg {
+        width: 120px;
+        margin-right: 0px;
+        use {
+          width: 120px;
+        }
+      }
+    }
+  }
+
+  // ------------------- 1920 -----------------
+  @media (min-width: s.$media_1920) {
+    width: 740px;
+    height: 380px;
+    padding: 87px 120px 80px 120px;
+
+    button {
+      gap: 15px;
+    }
+  }
+}

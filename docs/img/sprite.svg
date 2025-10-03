@@ -162,8 +162,8 @@
 <path fill="none" stroke="#fff" style="stroke: var(--color1, #fff)" stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4" stroke-width="0.9846" d="M59.077 31.508c-17.401 0-31.508-14.107-31.508-31.508s14.107-31.508 31.508-31.508c17.401 0 31.508 14.107 31.508 31.508s-14.107 31.508-31.508 31.508z"></path>
 </symbol>
 <symbol id="icon-button" viewBox="0 0 168 32">
-<path fill="none" stroke="#ffac30" style="stroke: var(--color3, #ffac30)" stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4" stroke-width="1.3913" d="M0 16h139.13"></path>
-<path fill="none" stroke="#ffac30" style="stroke: var(--color3, #ffac30)" stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4" stroke-width="1.3913" d="M144.696 1.391l22.261 14.609-22.261 14.609"></path>
+<path stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4" stroke-width="1.3913" d="M0 16h139.13"></path>
+<path stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4" stroke-width="1.3913" d="M144.696 1.391l22.261 14.609-22.261 14.609"></path>
 </symbol>
 <symbol id="icon-call" viewBox="0 0 32 32">
 <path fill="none" stroke="#fff" style="stroke: var(--color1, #fff)" stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4" stroke-width="0.5333" d="M27.733 16c0 6.48-5.253 11.733-11.733 11.733s-11.733-5.253-11.733-11.733c0-6.48 5.253-11.733 11.733-11.733s11.733 5.253 11.733 11.733z"></path>
