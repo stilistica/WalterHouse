@@ -1,0 +1,139 @@
+@use "../../base/globals.scss" as s;
+
+// .hero {
+//   width: 100%;
+//   min-height: 300px;
+//   // фон
+//   background-image: url('../path/to/your-image.jpg');
+//   background-size: cover;
+//   background-position: center;
+//   background-repeat: no-repeat;
+
+//   background-origin: border-box;
+//   background-clip: border-box;
+
+//   // якщо колірна плівка
+//   position: relative;
+//   overflow: hidden;
+
+//   &::after {
+//     content: "";
+//     position: absolute;
+//     inset: 0;
+//     background: rgba(0,0,0,0.25);
+//     pointer-events: none;
+//   }
+// }
+
+.hero {
+  width: 100%;
+  min-height: 480px;
+
+  background-image: url("../img/hero/hero-mob.webp");
+  @include s.bgr();
+
+  &__text {
+    padding-top: 104px;
+    @include s.d-flex($direction: column, $justify: center, $align: center);
+    gap: 64px;
+    &-slogan {
+      width: 280px;
+      font-family: s.$font__roboto;
+      font-weight: 500;
+      font-size: 12px;
+      line-height: 1.14;
+      letter-spacing: 0.69em;
+      text-transform: uppercase;
+      text-align: center;
+      color: s.$color__white;
+      opacity: 0.5;
+    }
+    &-title {
+      width: 310px;
+      @include s.d-flex($direction: column);
+      h1 {
+        font-family: s.$font__brs;
+        font-weight: 400;
+        font-size: 48px;
+        line-height: 0.8;
+        text-transform: uppercase;
+      }
+      &-desc {
+        font-family: s.$font__roboto;
+        font-weight: 400;
+        font-size: 8px;
+        line-height: 1.71875;
+        letter-spacing: 0.52em;
+        text-transform: uppercase;
+      }
+      &-house {
+        margin: 0 5px 0 auto;
+      }
+    }
+  }
+
+  // ------------------- 768 -----------------
+  @media (min-width: s.$media_768) {
+    min-height: 576px;
+
+    background-image: url("../img/hero/hero-tablet.webp");
+
+    &__text {
+      padding-top: 137px;
+      @include s.d-flex($direction: column, $justify: center, $align: center);
+      gap: 90px;
+      &-slogan {
+        width: auto;
+      }
+      &-title {
+        width: 680px;
+        h1 {
+          font-size: 96px;
+          line-height: 0.85;
+        }
+        &-desc {
+          font-size: 16px;
+          line-height: 1.71875;
+        }
+        &-house {
+          margin: 0 61px 0 auto;
+        }
+      }
+    }
+  }
+
+  // ------------------- 1440 -----------------
+  @media (min-width: s.$media_1440) {
+    min-height: none;
+    height: 100vh;
+
+    background-image: url("../img/hero/hero-desk.webp");
+
+    &__text {
+      // padding-top: 362px;
+      padding-top: 262px;
+      // padding-left: 318px;
+      padding-left: 218px;
+      @include s.d-flex($direction: column);
+      gap: 0px;
+      &-slogan {
+        display: none;
+      }
+      &-title {
+        width: 614px;
+        &-house {
+          margin: 0 0 0 auto;
+        }
+      }
+    }
+  }
+
+  // ------------------- 1920 -----------------
+  @media (min-width: s.$media_1920) {
+
+    &__text {
+      padding-top: 362px;
+      padding-left: 318px;
+    }
+  }
+}

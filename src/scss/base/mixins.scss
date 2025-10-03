@@ -12,3 +12,18 @@
   align-items: $align;
   flex-wrap: $wrap;
 }
+
+@mixin bgr(
+  $size: cover,
+  $position: center,
+  $repeat: no-repeat,
+  $origin: border-box,
+  $clip: border-box
+) {
+  background-size: $size;
+  background-position: $position;
+  background-repeat: $repeat;
+
+  background-origin: $origin;
+  background-clip: $clip;
+}
