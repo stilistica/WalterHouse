@@ -1,2 +1,136 @@
 @use "../base/globals.scss" as s;
 
+header {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  padding-top: 9px;
+
+  button {
+    background: transparent;
+    border: none;
+  }
+  & .header {
+    padding: 0 20px 0 0;
+    @include s.d-flex($direction: row, $justify: space-between, $align: center);
+    &__logo {
+      @include s.d-flex($direction: row, $align: center);
+      gap: 21px;
+      button {
+        svg {
+          width: 32px;
+          height: 18px;
+          opacity: 1;
+          transition: opacity 0.5s ease;
+        }
+        &:hover {
+          svg {
+            opacity: 0.6;
+          }
+        }
+      }
+      &-tel {
+        display: none;
+      }
+    }
+    &__call {
+      p {
+        display: none;
+      }
+      button {
+        svg {
+          width: 60px;
+          height: 60px;
+          use {
+            fill: transparent;
+            --call-stroke-1: rgba(255, 255, 255, 0.3);
+            --call-stroke-2: rgba(255, 255, 255, 0.1);
+            --call-stroke-fill: rgba(255, 255, 255, 0.15);
+            --call-stroke-tel: #fff;
+
+            transition: all 0.5s ease;
+          }
+        }
+        &:hover {
+          svg {
+            use {
+              --call-stroke-1: rgba(255, 255, 255, 0.7);
+              --call-stroke-2: rgba(255, 255, 255, 0.3);
+              --call-stroke-fill: rgba(255, 255, 255, 0.2);
+              --call-stroke-tel: #fff;
+            }
+          }
+        }
+      }
+    }
+  }
+  hr {
+    margin: 0;
+    margin-top: 5px;
+    border: 1px solid s.$color__white;
+    opacity: 0.25;
+  }
+
+  // ------------------- 768 -----------------
+  @media (min-width: s.$media_768) {
+    padding-top: 10px;
+
+    & .header {
+      padding: 0 20px 0 10px;
+      &__logo {
+        gap: 42px;
+      }
+      &__call {
+        @include s.d-flex($direction: row, $align: center);
+        gap: 47px;
+
+        p {
+          display: block;
+          font-weight: 600;
+          font-size: 16px;
+          letter-spacing: 0.1em;
+          text-transform: uppercase;
+          text-align: right;
+          color: s.$color__gold;
+        }
+        button {
+          svg {
+            width: 80px;
+            height: 80px;
+          }
+        }
+      }
+    }
+  }
+
+  // ------------------- 1440 -----------------
+  @media (min-width: s.$media_1440) {
+    box-sizing: border-box;
+    padding: 20px 178px 0 178px;
+
+    & .header {
+      padding: 0;
+      &__logo {
+        gap: 127px;
+        &-home {
+          display: none;
+        }
+        &-tel {
+					font-family: s.$font__roboto;
+          display: block;
+          font-weight: 500;
+          font-size: 16px;
+          letter-spacing: 0.1em;
+          color: s.$color__white;
+        }
+      }
+      &__call {
+				margin-right: 30px;
+
+      }
+    }
+		hr {
+			margin-top: 15px;
+		}
+  }
+}

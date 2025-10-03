@@ -111,7 +111,7 @@
 
     &__text {
       // padding-top: 362px;
-      padding-top: 262px;
+      padding-top: 268px;
       // padding-left: 318px;
       padding-left: 218px;
       @include s.d-flex($direction: column);
@@ -132,7 +132,7 @@
   @media (min-width: s.$media_1920) {
 
     &__text {
-      padding-top: 362px;
+      padding-top: 366px;
       padding-left: 318px;
     }
   }
