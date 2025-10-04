@@ -1,6 +1,7 @@
 @use "../../base/globals.scss" as s;
 
 .vertical-component {
+  z-index: 110;
   display: none;
   // ------------------- 1440 -----------------
   @media (min-width: s.$media_1440) {
@@ -17,8 +18,6 @@
       $justify: space-between,
       $align: center
     );
-    &__logo {
-    }
     &__text {
       transform: rotate(180deg);
       writing-mode: vertical-lr;
@@ -31,7 +30,6 @@
       opacity: 0.5;
     }
     &__line {
-      // height: 154px;
       height: 50px;
       opacity: 0.25;
     }
@@ -51,8 +49,6 @@
   @media (min-width: s.$media_1920) {
     padding: 37px 0 75px 0;
 
-    &__logo {
-    }
     &__text {
       margin-top: 43px;
       margin-right: 17px;

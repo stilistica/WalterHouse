@@ -1,6 +1,7 @@
 @use "../base/globals.scss" as s;
 
 header {
+  z-index: 105;
   position: absolute;
   width: 100%;
   top: 0;
@@ -116,7 +117,7 @@ header {
           display: none;
         }
         &-tel {
-					font-family: s.$font__roboto;
+          font-family: s.$font__roboto;
           display: block;
           font-weight: 500;
           font-size: 16px;
@@ -125,12 +126,11 @@ header {
         }
       }
       &__call {
-				margin-right: 30px;
-
+        margin-right: 30px;
       }
     }
-		hr {
-			margin-top: 15px;
-		}
+    hr {
+      margin-top: 15px;
+    }
   }
 }
