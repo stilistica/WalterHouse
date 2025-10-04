@@ -17,4 +17,10 @@ if (btnMenu && menu) {
       });
     });
   });
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape" && menu.classList.contains("active")) {
+      menu.classList.remove("active");
+      document.body.style.overflow = "";
+    }
+  });
 }

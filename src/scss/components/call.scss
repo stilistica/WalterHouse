@@ -1,0 +1,368 @@
+@use "../base/globals.scss" as s;
+
+.call {
+  z-index: 105;
+  width: 100%;
+  height: 100vh;
+
+  position: fixed;
+  bottom: -100%;
+
+  backdrop-filter: blur(60px);
+  background: rgba(0, 0, 0, 0.6);
+
+  transition: all 0.5s ease;
+
+  &.active {
+    bottom: 0;
+  }
+
+  button {
+    background: transparent;
+    border: none;
+  }
+
+  &__close {
+    // padding: 10px 0px 10px 0;
+    padding-top: 10px;
+    width: 100%;
+
+    @include s.d-flex($direction: column, $align: end);
+
+    &-button {
+      margin-right: 20px;
+      width: 60px;
+      height: 60px;
+      svg {
+        width: 60px;
+        height: 60px;
+        use {
+          --kolo: #fff;
+          --line-2: rgba(255, 255, 255, 0.1);
+          --line-1: rgba(255, 255, 255, 0.15);
+          --close: rgba(0, 0, 0, 0.15);
+        }
+      }
+      &:hover {
+        svg {
+          use {
+            --line-2: rgba(255, 255, 255, 0.7);
+            --close: rgba(0, 0, 0, 0.55);
+          }
+        }
+      }
+    }
+    hr {
+      margin: 0;
+      width: 100%;
+      margin-top: 10px;
+      border: 1px solid s.$color__white;
+      opacity: 0.25;
+    }
+  }
+  &__info {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    &-respond {
+      // margin-top: 150px;
+      margin-top: 50px;
+
+      display: none;
+      &-title {
+        width: 300px;
+        font-weight: 600;
+        // font-size: 36px;
+        font-size: 22px;
+        text-transform: uppercase;
+        text-align: center;
+      }
+      &-desc {
+        font-weight: 400;
+        // font-size: 16px;
+        font-size: 14px;
+        line-height: 1.875;
+        text-align: center;
+      }
+      &-back {
+        // margin-top: 150px;
+        margin-top: 50px;
+        @include s.d-flex(
+          $direction: row,
+          $align: center,
+          $justify: space-between
+        );
+        gap: 38px;
+        gap: 8px;
+        p {
+          font-weight: 600;
+          // font-size: 20px;
+          font-size: 16px;
+          letter-spacing: 0.45em;
+          text-transform: uppercase;
+          color: s.$color__gold;
+
+          transition: all 0.5s ease;
+        }
+        svg {
+          fill: transparent;
+          stroke: s.$color__gold;
+          width: 135px;
+
+          transition: all 0.5s ease;
+
+          use {
+            width: 135px;
+          }
+        }
+
+        &:hover {
+          p {
+            color: s.$color__hover;
+          }
+          svg {
+            stroke: s.$color__hover;
+          }
+        }
+      }
+      &.active {
+        display: block;
+
+        @include s.d-flex($direction: column, $align: center);
+        gap: 35px;
+      }
+      // ------------------- 768 -----------------
+      @media (min-width: s.$media_768) {
+        margin-top: 150px;
+
+        &-title {
+          width: 400px;
+          font-size: 36px;
+        }
+        &-desc {
+          font-size: 16px;
+        }
+        &-back {
+          margin-top: 150px;
+          gap: 38px;
+          p {
+            font-size: 20px;
+          }
+        }
+      }
+    }
+
+    &-form {
+      box-sizing: border-box;
+      width: 100%;
+      padding: 45px 40px 60px 40px;
+      @include s.d-flex($direction: column, $align: center);
+      gap: 17px;
+      &__input {
+        width: 100%;
+        max-width: 400px;
+        input {
+          background: transparent;
+
+          border: none;
+          width: 100%;
+
+          font-weight: 400;
+          font-size: 14px;
+          color: s.$color__white;
+
+          padding: 9px 0;
+          border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+
+          transition: all 0.5s ease;
+          &::placeholder {
+            font-weight: 400;
+            font-size: 14px;
+            color: s.$color__white;
+          }
+          &:focus {
+            background: transparent;
+            outline: none;
+            border-bottom: 1px solid s.$color__gold;
+          }
+          &.err {
+            border-bottom: 1px solid s.$color__red;
+          }
+          &:active {
+            background-color: transparent;
+          }
+          &:-webkit-autofill,
+          &:-webkit-autofill:hover,
+          &:-webkit-autofill:focus,
+          &:-webkit-autofill:active {
+            -webkit-box-shadow: 0 0 0px 1000px transparent inset !important;
+            -webkit-text-fill-color: s.$color__white !important;
+            transition: background-color 5000s ease-in-out 0s;
+          }
+        }
+        & .err-mess {
+          margin-top: 3px;
+          font-weight: 400;
+          font-size: 9px;
+          color: s.$color__red;
+        }
+      }
+
+      button {
+        margin-top: 5px;
+        @include s.d-flex($align: center, $justify: center);
+        background: transparent;
+        border: none;
+        p {
+          width: 140px;
+          font-weight: 500;
+          font-size: 14px;
+          letter-spacing: 0.45em;
+          text-transform: uppercase;
+          color: s.$color__gold;
+          text-align: left;
+
+          transition: color 0.5s ease;
+        }
+        svg {
+          fill: transparent;
+          stroke: s.$color__gold;
+          width: 100px;
+          height: 22px;
+
+          transition: stroke 0.5s ease;
+          use {
+            width: 100px;
+            height: 22px;
+          }
+        }
+
+        &:hover {
+          p {
+            color: s.$color__hover;
+          }
+          svg {
+            stroke: s.$color__hover;
+          }
+        }
+      }
+
+      // ------------------- 768 -----------------
+      @media (min-width: s.$media_768) {
+        width: 100%;
+        padding: 90px 124.5px 90px 124.5px;
+        gap: 27px;
+        &__input {
+          max-width: 700px;
+          input {
+            padding: 18px 0;
+
+            font-size: 18px;
+
+            &::placeholder {
+              font-size: 18px;
+            }
+          }
+          & .err-mess {
+            font-size: 12px;
+          }
+        }
+        button {
+          margin-top: 25px;
+          padding: 0;
+          @include s.d-flex($align: center, $justify: space-between);
+          gap: 25px;
+          p {
+            width: auto;
+            font-size: 20px;
+          }
+          svg {
+            width: 160px;
+            height: 22px;
+            margin-right: -25px;
+            use {
+              width: 160px;
+            }
+          }
+        }
+      }
+
+      // ------------------- 1440 -----------------
+      @media (min-width: s.$media_1440) {
+        background: transparent;
+        width: 680px;
+        height: 330px;
+        padding: 87px 120px 80px 120px;
+        padding: 67px 100px 60px 100px;
+        gap: 26px;
+        &__input {
+          max-width: none;
+
+          input {
+            max-width: none;
+            padding: 16px 0;
+          }
+        }
+        button {
+          margin-top: 23px;
+          width: 100%;
+          @include s.d-flex($align: center, $justify: space-between);
+          gap: 0;
+          p {
+            width: auto;
+          }
+          svg {
+            width: 120px;
+            margin-right: 0px;
+            use {
+              width: 120px;
+            }
+          }
+        }
+      }
+
+      // ------------------- 1920 -----------------
+      @media (min-width: s.$media_1920) {
+        width: 740px;
+        height: 380px;
+        padding: 87px 120px 80px 120px;
+
+        button {
+          gap: 15px;
+        }
+      }
+    }
+  }
+  // ------------------- 1440 -----------------
+  @media (min-width: s.$media_1440) {
+    &__close {
+      box-sizing: border-box;
+      padding: 20px 178px 0 178px;
+
+      &-button {
+        margin-right: 30px;
+        width: 80px;
+        height: 80px;
+        svg {
+          width: 80px;
+          height: 80px;
+        }
+      }
+      hr {
+        margin-top: 15px;
+      }
+    }
+    &__form {
+      & .form {
+        background: none;
+      }
+      input {
+        &::placeholder {
+          font-size: 18px;
+        }
+      }
+    }
+  }
+}
