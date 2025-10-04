@@ -1,29 +1,5 @@
 @use "../../base/globals.scss" as s;
 
-// .hero {
-//   width: 100%;
-//   min-height: 300px;
-//   // фон
-//   background-image: url('../path/to/your-image.jpg');
-//   background-size: cover;
-//   background-position: center;
-//   background-repeat: no-repeat;
-
-//   background-origin: border-box;
-//   background-clip: border-box;
-
-//   // якщо колірна плівка
-//   position: relative;
-//   overflow: hidden;
-
-//   &::after {
-//     content: "";
-//     position: absolute;
-//     inset: 0;
-//     background: rgba(0,0,0,0.25);
-//     pointer-events: none;
-//   }
-// }
 
 .hero {
   width: 100%;

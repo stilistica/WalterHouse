@@ -111,7 +111,6 @@
     button {
       margin-top: 25px;
       padding: 0;
-      // width: 519px;
       @include s.d-flex($align: center, $justify: space-between);
       gap: 25px;
       p {
@@ -132,12 +131,9 @@
   // ------------------- 1440 -----------------
   @media (min-width: s.$media_1440) {
     background: s.$color__white;
-    // width: 740px;
-    width: 680px;
-    // height: 380px;
-    height: 330px;
-    padding: 87px 120px 80px 120px;
-    padding: 67px 100px 60px 100px;
+    width: 580px;
+    height: 300px;
+    padding: 37px 80px 20px 80px;
     gap: 26px;
     &__input {
       max-width: none;
@@ -151,7 +147,6 @@
       margin-top: 23px;
       width: 100%;
       @include s.d-flex($align: center, $justify: space-between);
-      // gap: 15px;
       gap: 0;
       p {
         width: auto;

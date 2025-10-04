@@ -229,10 +229,9 @@
           rgba(255, 255, 255, 1) 50%,
           rgba(255, 255, 255, 0) 100%
         );
-        transition: opacity 0.3s ease; // щоб м'яко зникало
+        transition: opacity 0.3s ease;
       }
 
-      // створюємо бордер зліва (для ховера всередині)
       &:not(:first-child)::before {
         content: "";
         position: absolute;
