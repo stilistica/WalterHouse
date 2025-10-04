@@ -5,7 +5,7 @@
   <link rel="icon" type="image/svg+xml" href="img/logo.svg?v=2" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>WalterHouse</title>
-  <link rel="stylesheet" href="css/style.min.css?_v=20251004195625" />
+  <link rel="stylesheet" href="css/style.min.css?_v=20251004223128" />
 </head>
 
   <body>
@@ -42,8 +42,7 @@
   </div>
   <hr />
 </header>
-
-    <section class="menu">
+ <section class="menu">
   <ul class="menu__nav">
     <li class="menu__nav-item">
       <a href="#styles" aria-label="Styles">Renovation styles</a>
@@ -102,8 +101,7 @@
     </ul>
   </div>
 </section>
-
-    <section class="call">
+ <section class="call">
   <div class="call__close">
     <button class="call__close-button">
       <svg>
@@ -170,8 +168,11 @@
   </nav>
 </div>
 
-    <main >
-    <section class="section-form">
+    <main>
+      <div class="swiper-main">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <section class="section-form swiper-slide">
   <div class="hero">
     <div class="hero__text">
       <p class="hero__text-slogan">turnkey apartment renovation</p>
@@ -199,7 +200,9 @@
 </div>
 </section>
 
-    <section class="section-form section-about-main">
+          </div>
+          <div class="swiper-slide">
+            <section class="section-form section-about-main swiper-slide">
   <div class="main-about">
     <div class="main-about__info">
       <p class="main-about__info-desc">elite renovation of your apartment</p>
@@ -242,8 +245,15 @@
 </div>
 </section>
 
-
-      <!-- <picture><source srcset="img/image.webp" type="image/webp"><img width="150" src="img/image.png" alt="photo" /></picture> -->
+          </div>
+        </div>
+        <div class="swiper-pagination-main"></div>
+      </div>
+    </main>
+    <script defer src="js/main.min.js?_v=20251004223128"></script>
+  </body>
+</html>
+<!-- <picture><source srcset="img/image.webp" type="image/webp"><img width="150" src="img/image.png" alt="photo" /></picture> -->
 
       <!-- <svg>
         <use href="img/sprite.svg#icon-figma"></use>
@@ -270,7 +280,3 @@
         <source media="(min-width: 768px)" srcset="images/photo-768.jpg" />
         <img src="images/photo-375.jpg" alt="Опис зображення" />
       </picture> -->
-    </main>
-    <script defer src="js/main.min.js?_v=20251004195625"></script>
-  </body>
-</html>

@@ -87,9 +87,10 @@
     }
   }
   &__btn {
+		height: 31px;
     position: absolute;
     left: calc(392px / 1920px * 100%);
-    bottom: calc(45px / 1920px * 100%);
+    bottom: calc(145px / 1920px * 100%);
     @include s.d-flex($direction: row, $justify: center, $align: center);
     gap: 29px;
     font-weight: 600;

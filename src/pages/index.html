@@ -2,15 +2,26 @@
 <html lang="en">
   @@include('components/head.html', { "title":"WalterHouse" })
   <body>
-    @@include('components/header.html', {})
-    @@include('components/menu.html', {})
-    @@include('components/call.html', {})
+    @@include('components/header.html', {}) @@include('components/menu.html',
+    {}) @@include('components/call.html', {})
     @@include('components/main/component.html', {})
-    <main >
-    @@include('components/main/hero.html', {})
-    @@include('components/main/about.html', {})
-
-      <!-- <img width="150" src="@img/image.png" alt="photo" /> -->
+    <main>
+      <div class="swiper-main">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            @@include('components/main/hero.html', {})
+          </div>
+          <div class="swiper-slide">
+            @@include('components/main/about.html', {})
+          </div>
+        </div>
+        <div class="swiper-pagination-main"></div>
+      </div>
+    </main>
+    <script defer src="js/main.min.js"></script>
+  </body>
+</html>
+<!-- <img width="150" src="@img/image.png" alt="photo" /> -->
 
       <!-- <svg>
         <use href="@img/sprite.svg#icon-figma"></use>
@@ -37,7 +48,3 @@
         <source media="(min-width: 768px)" srcset="images/photo-768.jpg" />
         <img src="images/photo-375.jpg" alt="Опис зображення" />
       </picture> -->
-    </main>
-    <script defer src="js/main.min.js"></script>
-  </body>
-</html>

@@ -14,5 +14,6 @@
 @use "./components/call.scss" as *;
 
 // ------------------- main ------------------
+@use "./components/main/swiperMain.scss" as *;
 @use "./components/main/hero.scss" as *;
 @use "./components/main/about.scss" as *;
