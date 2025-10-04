@@ -1,0 +1,80 @@
+@use "../../base/globals.scss" as s;
+
+.vertical-component {
+  display: none;
+  // ------------------- 1440 -----------------
+  @media (min-width: s.$media_1440) {
+    display: block;
+    position: absolute;
+    left: 65px;
+
+    box-sizing: border-box;
+    padding: 37px 0;
+    height: 100vh;
+
+    @include s.d-flex(
+      $direction: column,
+      $justify: space-between,
+      $align: center
+    );
+    &__logo {
+    }
+    &__text {
+      transform: rotate(180deg);
+      writing-mode: vertical-lr;
+
+      font-weight: 500;
+      font-size: 12px;
+      letter-spacing: 0.69em;
+      text-transform: uppercase;
+      color: s.$color__white;
+      opacity: 0.5;
+    }
+    &__line {
+      // height: 154px;
+      height: 50px;
+      opacity: 0.25;
+    }
+    &__nav {
+      @include s.d-flex($direction: column, $align: center);
+      gap: 41px;
+      gap: 31px;
+      &-link {
+        svg {
+          width: 17.5px;
+          height: 17.5px;
+        }
+      }
+    }
+  }
+  // ------------------- 1920 -----------------
+  @media (min-width: s.$media_1920) {
+    padding: 37px 0 75px 0;
+
+    &__logo {
+    }
+    &__text {
+      margin-top: 43px;
+      margin-right: 17px;
+    }
+    &__line {
+      margin-left: 24px;
+
+      height: 154px;
+    }
+    &__nav {
+      margin-top: 37px;
+
+      margin-right: 17px;
+
+      @include s.d-flex($direction: column, $align: center);
+      gap: 35px;
+      &-link {
+        svg {
+          width: 23.5px;
+          height: 20px;
+        }
+      }
+    }
+  }
+}

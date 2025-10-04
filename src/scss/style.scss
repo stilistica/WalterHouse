@@ -9,6 +9,7 @@
 
 @use "./components/header.scss" as *;
 @use "./components/form.scss" as *;
+@use "./components/main/component.scss" as *;
 
 // ------------------- main ------------------
 @use "./components/main/hero.scss" as *;
