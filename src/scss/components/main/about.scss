@@ -20,7 +20,7 @@
     @include s.d-flex($direction: column, $justify: center, $align: center);
     gap: 38px;
     &-desc {
-			width: 500px;
+      width: 500px;
       font-family: s.$font__roboto;
       font-weight: 700;
       font-size: 20px;
@@ -87,7 +87,7 @@
     }
   }
   &__btn {
-		height: 31px;
+    height: 31px;
     position: absolute;
     left: calc(392px / 1920px * 100%);
     bottom: calc(145px / 1920px * 100%);
@@ -101,12 +101,22 @@
 
     background: transparent;
     border: none;
+
+    transition: color 0.5s ease;
     svg {
       width: 115px;
       use {
         fill: transparent;
         stroke: s.$color__white;
         opacity: 0.5;
+
+        transition: stroke 0.5s ease;
+      }
+    }
+    &:hover {
+      color: s.$color__gold;
+      use {
+        stroke: s.$color__gold;
       }
     }
   }

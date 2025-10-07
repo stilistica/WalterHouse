@@ -8,14 +8,14 @@ const swiperMain = document.querySelector(".swiper-main");
 if (swiperMain) {
   document.addEventListener("DOMContentLoaded", () => {
     new Swiper(".swiper-main", {
-      direction: "horizontal",
+      direction: "vertical",
+      effect: "fade",
       keyboard: { enabled: true, onlyInViewport: true },
       modules: [Pagination, Keyboard],
       slidesPerView: 1,
       resizeObserver: true,
       observer: true,
       observeParents: true,
-      // slidesPerView: 0,
       loop: false,
       breakpoints: {
         0: {
@@ -23,9 +23,25 @@ if (swiperMain) {
         },
         1440: {
           enabled: true,
+          pagination: {
+            // dynamicBullets: true,
+            el: ".swiper-pagination-main",
+            clickable: true,
+            renderBullet: function (index, className) {
+              // if (index >= 5) return "";
+              return ` 
+              <div class="${className}">
+              <svg class="pagination-icon default">
+                <use href="img/sprite.svg#icon-swiper-dot"></use>
+              </svg>
+              <svg class="pagination-icon active">
+                <use href="img/sprite.svg#icon-swiper-dot-active"></use>
+              </svg>
+              </div>`;
+            },
+          },
         },
       },
     });
-    // swiper.update();
   });
 }
