@@ -1,28 +1,36 @@
-<section class="section-form section-about-main swiper-slide">
-  <div class="main-about">
-    <div class="main-about__info">
-      <p class="main-about__info-desc">elite renovation of your apartment</p>
-      <ul class="main-about__info-list">
-        <li>
-          18
-          <p>years <br/> on the market</p>
-        </li>
-        <li>
-          237
-          <p>completed <br/> projects</p>
-        </li>
-        <li>
-          50
-          <p>employees</p>
-        </li>
-      </ul>
+<section class="swiper-slide">
+  <div class="section-form section-about-main">
+    <div class="main-about">
+      <div class="main-about__info">
+        <p class="main-about__info-desc">elite renovation of your apartment</p>
+        <ul class="main-about__info-list">
+          <li>
+            18
+            <p>
+              years <br />
+              on the market
+            </p>
+          </li>
+          <li>
+            237
+            <p>
+              completed <br />
+              projects
+            </p>
+          </li>
+          <li>
+            50
+            <p>employees</p>
+          </li>
+        </ul>
+      </div>
+      <button class="main-about__btn">
+        more info about us
+        <svg>
+          <use href="@img/sprite.svg#icon-button"></use>
+        </svg>
+      </button>
     </div>
-    <button class="main-about__btn">
-      more info about us
-      <svg>
-        <use href="@img/sprite.svg#icon-button"></use>
-      </svg>
-    </button>
+    <div class="main-form">@@include('components/form.html', {})</div>
   </div>
-  <div class="main-form">@@include('components/form.html', {})</div>
 </section>

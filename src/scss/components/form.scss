@@ -10,7 +10,7 @@
 .form {
   box-sizing: border-box;
   width: 100%;
-  padding: 45px 40px 60px 40px;
+  padding: 45px 40px 55px 40px;
   @include s.d-flex($direction: column, $align: center);
   gap: 17px;
   &__input {
@@ -91,7 +91,7 @@
   // ------------------- 768 -----------------
   @media (min-width: s.$media_768) {
     width: 100%;
-    padding: 90px 124.5px 90px 124.5px;
+    padding: 90px 124.5px 96px 124.5px;
     gap: 27px;
     &__input {
       max-width: 700px;

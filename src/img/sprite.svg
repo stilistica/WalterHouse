@@ -99,8 +99,8 @@
 <path fill="none" stroke="#ffac30" style="stroke: var(--color3, #ffac30)" stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4" stroke-width="0.3404" d="M13.957 14.468h-10.213"></path>
 </symbol>
 <symbol id="icon-button-shot" viewBox="0 0 109 32">
-<path fill="none" stroke="#fff" style="stroke: var(--color1, #fff)" stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4" stroke-width="1.3913" d="M0 16h79.304"></path>
-<path fill="none" stroke="#fff" style="stroke: var(--color1, #fff)" stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4" stroke-width="1.3913" d="M84.87 1.391l22.261 14.609-22.261 14.609"></path>
+<path  stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4" stroke-width="1.3913" d="M0 16h79.304"></path>
+<path stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4" stroke-width="1.3913" d="M84.87 1.391l22.261 14.609-22.261 14.609"></path>
 </symbol>
 <symbol id="icon-swiper-dot-active" viewBox="0 0 32 32">
 <path fill="#ffac30" style="fill: var(--color3, #ffac30)" d="M16 20.48c-2.474 0-4.48-2.006-4.48-4.48s2.006-4.48 4.48-4.48c2.474 0 4.48 2.006 4.48 4.48s-2.006 4.48-4.48 4.48z"></path>
