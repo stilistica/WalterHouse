@@ -1,0 +1,9 @@
+@use "../../base/globals.scss" as s;
+
+.size {
+  width: 100%;
+  min-height: 540px;
+
+  background-image: url("../img/size/size-mob.webp");
+  @include s.bgr();
+}
