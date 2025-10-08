@@ -1,5 +1,11 @@
 @use "../base/globals.scss" as s;
 
+.desc-form {
+  display: none;
+  @media (min-width: s.$media_1440) {
+    display: block;
+  }
+}
 .main-form {
   @media (min-width: s.$media_1440) {
     position: fixed;
