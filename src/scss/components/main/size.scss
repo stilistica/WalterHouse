@@ -262,8 +262,10 @@
     min-height: auto;
     height: 100vh;
     padding: 0;
+    // padding-top: calc(152px / 1080px * 100%);
     padding-top: calc(152px / 1080px * 100%);
-    padding-left: calc(243px / 1920px * 100%);
+    // padding-left: calc(243px / 1920px * 100%);
+    padding-left: calc(100px / 1440px * 100%);
 
     background-image: url("../img/size/size-desk.webp");
 
@@ -286,14 +288,15 @@
     &__info {
       margin-top: -5px;
       margin-left: 20px;
-      max-width: 1346px;
+      // max-width: 1346px;
+      // max-width: 1346px;
       @include s.d-flex($direction: row, $justify: center, $align: center);
       gap: 0px;
       &-variant {
         width: auto;
         gap: 23px;
         &-btns {
-					gap: 19px;
+          gap: 19px;
           button {
             gap: 0px;
             p {
@@ -317,9 +320,26 @@
         }
       }
       &-price {
-				margin-top: 50px;
+        margin-top: 50px;
         gap: 25px;
+        // margin-left: 90px;
+        margin-left: 30px;
+
+        // font-size: 64px;
+        font-size: 44px;
+      }
+    }
+  }
+  // ------------------- 1920 -----------------
+  @media (min-width: s.$media_1920) {
+    padding-top: calc(152px / 1080px * 100%);
+    padding-left: calc(243px / 1920px * 100%);
+    &__info {
+      max-width: 1346px;
+      &-price {
         margin-left: 90px;
+
+        font-size: 64px;
       }
     }
   }
