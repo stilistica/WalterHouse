@@ -145,7 +145,7 @@
 <path fill="none" stroke="#ffac30" style="stroke: var(--color3, #ffac30)" stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4" stroke-width="1.3913" d="M15.685 30.463c-8.129 0-14.719-6.59-14.719-14.719s6.59-14.719 14.719-14.719c8.129 0 14.719 6.59 14.719 14.719s-6.59 14.719-14.719 14.719z"></path>
 </symbol>
 <symbol id="icon-dot" viewBox="0 0 32 32">
-<path fill="#fff" style="fill: var(--color1, #fff)" d="M14.369 29.007c-7.832 0-14.181-6.349-14.181-14.181s6.349-14.181 14.181-14.181c7.832 0 14.181 6.349 14.181 14.181s-6.349 14.181-14.181 14.181z"></path>
+<path  d="M14.369 29.007c-7.832 0-14.181-6.349-14.181-14.181s6.349-14.181 14.181-14.181c7.832 0 14.181 6.349 14.181 14.181s-6.349 14.181-14.181 14.181z"></path>
 </symbol>
 <symbol id="icon-swiper-right" viewBox="0 0 26 32">
 <path fill="none" stroke="#fff" style="stroke: var(--color1, #fff)" stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4" stroke-width="2.0645" d="M1.032 1.032l22.71 14.968-22.71 14.968"></path>
