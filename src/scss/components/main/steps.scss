@@ -1,0 +1,239 @@
+@use "../../base/globals.scss" as s;
+
+.steps {
+  box-sizing: border-box;
+  width: 100%;
+  min-height: 540px;
+  padding: 44px 20px 53px 20px;
+
+  background-image: url("../img/steps/steps-mob.webp");
+  @include s.bgr();
+
+  @include s.d-flex($direction: column, $align: center);
+  gap: 0px;
+
+  &__title {
+    padding: 0 15px;
+    font-family: s.$font__roboto;
+    font-weight: 700;
+    font-size: 14px;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    text-align: center;
+  }
+  &__info {
+    @include s.d-flex($direction: column, $align: center);
+    &-svg {
+      @include s.d-flex($direction: column, $align: center);
+      h3 {
+        padding: 76px;
+        position: relative;
+        box-sizing: border-box;
+
+        font-family: s.$font__br;
+        font-weight: 400;
+        font-size: 40px;
+        line-height: 1.75;
+
+        &::after {
+          content: "";
+          position: absolute;
+          top: 0;
+          left: 2%;
+
+          width: 100%;
+          height: 100%;
+          background: url("../img/steps/element-steps.svg") no-repeat center /
+            contain;
+        }
+      }
+    }
+    &-variant {
+      width: 100%;
+      @include s.d-flex($direction: column, $align: center);
+      gap: 15px;
+      &-title {
+        @include s.d-flex($direction: column, $align: center);
+        gap: 20px;
+        img {
+          width: 49px;
+          height: 60px;
+        }
+        h2 {
+          font-weight: 600;
+          font-size: 24px;
+          text-transform: uppercase;
+          text-align: center;
+        }
+      }
+      &-desc {
+        svg {
+          display: none;
+        }
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 1.28571;
+        text-transform: uppercase;
+        text-align: center;
+      }
+    }
+  }
+  // ------------------- 768 -----------------
+  @media (min-width: s.$media_768) {
+    min-height: 720px;
+    padding: 50px 134px 69px 134px;
+
+    background-image: url("../img/steps/steps-tablet.webp");
+
+    gap: 45px;
+
+    &__title {
+      padding: 0;
+
+      font-size: 18px;
+    }
+    &__info {
+      gap: 20px;
+      &-svg {
+        h3 {
+          padding: 95px;
+
+          font-size: 64px;
+          line-height: 1.09375;
+
+          &::after {
+            top: 0;
+            left: 0%;
+          }
+        }
+      }
+      &-variant {
+        gap: 10px;
+        &-title {
+          gap: 27px;
+          img {
+            width: 75px;
+            height: 92px;
+          }
+          h2 {
+            font-size: 36px;
+          }
+        }
+        &-desc {
+          font-size: 18px;
+          line-height: 1.66667;
+        }
+      }
+    }
+  }
+  // ------------------- 1440 -----------------
+  @media (min-width: s.$media_1440) {
+    position: relative;
+    min-height: auto;
+    height: 100vh;
+    padding: 0;
+
+    background-image: url("../img/steps/steps-desk.webp");
+
+    @include s.d-flex($direction: column);
+    gap: 0px;
+
+    &__title {
+      position: absolute;
+      width: 326px;
+      top: calc(307px / 1080px * 100%);
+      left: calc(602px / 1920px * 100%);
+      padding: 0;
+
+      text-align: left;
+
+      font-size: 20px;
+    }
+    &__info {
+      position: absolute;
+      top: calc(335px / 1080px * 100%);
+      left: calc(283px / 1920px * 100%);
+      @include s.d-flex($direction: row, $align: center);
+      // width: auto;
+      width: 75%;
+      gap: calc(79px / 1920px * 100%);
+      &-variant {
+        @include s.d-flex($direction: row, $align: center);
+        gap: calc(108px / 1920px * 100%);
+
+        &-title {
+          @include s.d-flex($direction: row, $align: center);
+          gap: 15px;
+
+          h2 {
+            width: 243px;
+            text-align: left;
+          }
+        }
+        &-desc {
+          @include s.d-flex($direction: row, $align: center);
+
+          text-align: left;
+          max-width: 400px;
+          gap: calc(78px / 1920px * 100%);
+
+          svg {
+            display: block;
+            width: 42px;
+            height: 29px;
+            use {
+              width: 22px;
+              height: 29px;
+            }
+          }
+        }
+      }
+    }
+  }
+  // ------------------- 1920 -----------------
+  @media (min-width: s.$media_1920) {
+    &__info {
+      position: absolute;
+      top: calc(335px / 1080px * 100%);
+      left: calc(283px / 1920px * 100%);
+      @include s.d-flex($direction: row, $align: center);
+      width: 100%;
+      gap: calc(79px / 1920px * 100%);
+      &-variant {
+        @include s.d-flex($direction: row, $align: center);
+        gap: calc(118px / 1920px * 100%);
+
+        &-title {
+          @include s.d-flex($direction: row, $align: center);
+          gap: calc(250px / 1920px * 100%);
+          img {
+            width: 95px;
+            height: 102px;
+          }
+          h2 {
+            width: 303px;
+            text-align: left;
+          }
+        }
+        &-desc {
+          margin-left: -10px;
+          @include s.d-flex($direction: row, $align: center);
+
+          text-align: left;
+          max-width: 500px;
+          gap: calc(288px / 1920px * 100%);
+
+          svg {
+            display: block;
+            width: 42px;
+            height: 29px;
+            use {
+              width: 22px;
+              height: 29px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
