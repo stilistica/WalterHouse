@@ -73,6 +73,7 @@
     }
     &-hover {
       display: none;
+      transition: all 0.5s ease;
 
       &-desc {
         font-weight: 600;
@@ -80,11 +81,15 @@
         line-height: 1.71429;
         text-transform: uppercase;
         text-align: center;
+
+        transition: all 0.5s ease;
       }
       &-btns {
         cursor: pointer;
 
         @include s.d-flex($direction: column, $align: center);
+        transition: all 0.5s ease;
+
         button {
           @include s.d-flex($direction: row, $align: center);
           background: transparent;
@@ -160,8 +165,8 @@
       }
     }
 
-    // ------------ hover --------------
-    &:hover {
+    // ------------ active --------------
+    &.active {
       height: 480px;
       gap: 67px;
 
@@ -229,8 +234,8 @@
         }
       }
 
-      // ------------ hover --------------
-      &:hover {
+      // ------------ active --------------
+      &.active {
         height: 576px;
         gap: 142px;
 
@@ -259,6 +264,7 @@
     height: 100vh;
     @include s.d-flex($direction: row, $justify: stretch);
 
+    transition: all 0.5s ease;
     &__item {
       @include s.d-flex($direction: row, $align: center);
       box-sizing: border-box;
@@ -287,6 +293,7 @@
         &:hover {
           background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
             url("../img/page-3/elite.webp");
+          @include s.bgr();
         }
         .styles__item-title {
           &::after {
@@ -299,6 +306,7 @@
         &:hover {
           background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
             url("../img/page-3/vip.webp");
+          @include s.bgr();
         }
         .styles__item-title {
           &::after {
@@ -311,6 +319,7 @@
         &:hover {
           background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
             url("../img/page-3/extra.webp");
+          @include s.bgr();
         }
         .styles__item-title {
           &::after {
@@ -363,8 +372,8 @@
         }
       }
 
-      // ------------ hover --------------
-      &:hover {
+      // ------------ active --------------
+      &.active {
         padding: 0 100px;
 
         height: 100%;
