@@ -140,16 +140,23 @@
   // ------------------- 1440 -----------------
   @media (min-width: s.$media_1440) {
     background: s.$color__white;
-    width: 580px;
-    height: 300px;
-    padding: 37px 80px 20px 80px;
-    gap: 26px;
+    width: 540px;
+    height: 200px;
+    padding: 27px 30px 20px 30px;
+    gap: 6px;
+
     &__input {
       max-width: none;
 
       input {
         max-width: none;
         padding: 16px 0;
+
+        font-size: 16px;
+
+        &::placeholder {
+          font-size: 16px;
+        }
       }
     }
     button {
@@ -175,6 +182,15 @@
     width: 740px;
     height: 380px;
     padding: 87px 120px 80px 120px;
+    gap: 26px;
+
+    input {
+      font-size: 18px;
+
+      &::placeholder {
+        font-size: 18px;
+      }
+    }
 
     button {
       gap: 15px;
