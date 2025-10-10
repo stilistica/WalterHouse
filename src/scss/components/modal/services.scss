@@ -1,0 +1,141 @@
+@use "../../base/globals.scss" as s;
+
+.modal-mob {
+  // ------------------- 1440 -----------------
+  @media (min-width: s.$media_1440) {
+    display: none;
+  }
+}
+.modal-desk {
+  display: none;
+  // ------------------- 1440 -----------------
+  @media (min-width: s.$media_1440) {
+    display: flex;
+  }
+}
+
+.services-modal {
+  z-index: 120;
+
+  position: fixed;
+
+  right: -100%;
+  top: 0;
+
+  height: 100vh;
+  width: 100%;
+
+  overflow-y: auto;
+  background: s.$color__white;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  transition: right 0.5s ease;
+
+  &.active {
+    right: 0;
+  }
+
+  &__close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: transparent;
+    border: none;
+    svg {
+      stroke: rgba(0, 0, 0, 0.15);
+      width: 21px;
+      height: 21px;
+
+      transition: stroke 0.5s ease;
+    }
+    &:hover {
+      svg {
+        stroke: rgba(0, 0, 0, 0.25);
+      }
+    }
+  }
+  &__info {
+    @include s.d-flex($direction: column);
+    gap: 25px;
+    padding: 60px 20px;
+    &-title {
+      font-weight: 400;
+      font-size: 20px;
+      text-transform: uppercase;
+      color: s.$color__gold;
+    }
+    hr {
+      padding: 0;
+      margin: 0;
+      border-color: rgba(0, 0, 0, 0.15);
+    }
+    &-desc {
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 1.71429;
+      color: s.$color__black;
+    }
+  }
+  // ------------------- 768 -----------------
+  @media (min-width: s.$media_768) {
+    &__close {
+      top: 60px;
+      right: 60px;
+      svg {
+        width: 33px;
+        height: 34.5px;
+      }
+    }
+    &__info {
+      gap: 30px;
+      padding: 173px 126px;
+      &-title {
+        font-size: 24px;
+      }
+      &-desc {
+        font-size: 16px;
+        line-height: 1.875;
+      }
+    }
+  }
+
+  // ------------------- 1440 -----------------
+  @media (min-width: s.$media_1440) {
+    top: auto;
+    bottom: 0;
+    height: 250px;
+    width: 540px;
+    &__close {
+      display: none;
+    }
+    &__info {
+      gap: 20px;
+      padding: 37px 30px;
+      &-title {
+        font-size: 20px;
+      }
+      &-desc {
+        font-size: 14px;
+      }
+    }
+  }
+  // ------------------- 1920 -----------------
+  @media (min-width: s.$media_1920) {
+    height: 380px;
+    width: 740px;
+    &__info {
+      gap: 30px;
+      padding: 70px 120px;
+      &-title {
+        font-size: 24px;
+      }
+      &-desc {
+        font-size: 16px;
+        line-height: 1.875;
+      }
+    }
+  }
+}
