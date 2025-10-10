@@ -26,7 +26,6 @@ if (swiperMain) {
           el: ".swiper-pagination-main",
           clickable: true,
           renderBullet: function (index, className) {
-            if (index >= 5) return "";
             return `
             <div class="${className}">
               <svg class="pagination-icon default">
