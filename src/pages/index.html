@@ -5,20 +5,16 @@
     @@include('components/header.html', {}) @@include('components/menu.html',
     {}) @@include('components/call.html', {})
     @@include('components/main/component.html', {})
+    <div class="modal-mob">@@include('components/modal/services.html', {})</div>
     <main>
       <div class="swiper-main">
         <div class="swiper-wrapper">
-            @@include('components/main/hero.html', {})
-
-            @@include('components/main/about.html', {})
-
-            @@include('components/main/styles.html', {})
-
-            @@include('components/main/size.html', {})
-
-            @@include('components/main/steps.html', {})
-
-            @@include('components/main/services.html', {})
+          @@include('components/main/hero.html', {})
+          @@include('components/main/about.html', {})
+          @@include('components/main/styles.html', {})
+          @@include('components/main/size.html', {})
+          @@include('components/main/steps.html', {})
+          @@include('components/main/services.html', {})
         </div>
         <div class="swiper-pagination-main"></div>
       </div>
@@ -28,14 +24,14 @@
 </html>
 <!-- <img width="150" src="@img/image.png" alt="photo" /> -->
 
-      <!-- <svg>
+<!-- <svg>
         <use href="@img/sprite.svg#icon-figma"></use>
       </svg>
       <svg>
         <use href="@img/sprite.svg#icon-cube"></use>
       </svg> -->
 
-      <!-- <img src="images/photo-375.jpg" 
+<!-- <img src="images/photo-375.jpg" 
       srcset=" 
       images/photo-375.jpg 375w,
       images/photo-768.jpg 768w, 
@@ -48,7 +44,7 @@
 
       alt="Опис зображення" /> -->
 
-      <!-- <picture>
+<!-- <picture>
         <source media="(min-width: 1440px)" srcset="images/photo-1440.jpg" />
         <source media="(min-width: 768px)" srcset="images/photo-768.jpg" />
         <img src="images/photo-375.jpg" alt="Опис зображення" />

@@ -5,4 +5,5 @@ import "./modules/swiperMain.js";
 import "./modules/styles.js";
 import "./modules/size.js";
 import "./modules/services.js";
+import "./modules/modal/services.js";
 
