@@ -13,6 +13,44 @@
     display: flex;
   }
 }
+.modal-back-btn {
+  position: absolute;
+  right: 178px;
+  top: 140px;
+  background: transparent;
+  border: none;
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  p {
+    font-weight: 600;
+    font-size: 16px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: s.$color__white;
+
+    transition: color 0.5s ease;
+  }
+  svg {
+    fill: none;
+    stroke: s.$color__white;
+    width: 125px;
+    height: 22px;
+
+    transition: stroke 0.5s ease;
+  }
+  &:hover {
+    p {
+      color: s.$color__gold;
+    }
+    svg {
+      stroke: s.$color__gold;
+    }
+  }
+  @media (min-width: s.$media_1920) {
+    top: 160px;
+  }
+}
 
 .container {
   // padding: 0 32px;

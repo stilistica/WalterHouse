@@ -64,6 +64,7 @@
           font-size: 24px;
           text-transform: uppercase;
           text-align: center;
+          color: s.$color__white;
         }
       }
       &-desc {
@@ -162,12 +163,19 @@
         gap: calc(108px / 1920px * 100%);
 
         &-title {
+          cursor: pointer;
           @include s.d-flex($direction: row, $align: center);
           gap: 15px;
 
           h2 {
             width: 243px;
             text-align: left;
+            transition: all 0.5s ease;
+          }
+          &:hover {
+            h2 {
+              color: s.$color__gold;
+            }
           }
         }
         &-desc {
