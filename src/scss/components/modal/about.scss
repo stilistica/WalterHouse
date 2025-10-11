@@ -1,0 +1,158 @@
+@use "../../base/globals.scss" as s;
+
+.modal-about {
+  display: none;
+  // ------------------- 1440 -----------------
+  @media (min-width: s.$media_1440) {
+    z-index: 95;
+
+    width: 100%;
+    height: 100vh;
+
+    position: fixed;
+    left: -100%;
+    top: 0;
+
+    background-image: url("../img/about/page-about.webp");
+    @include s.bgr();
+
+    @include s.d-flex($direction: column, $align: center);
+    // gap: 34px;
+    gap: 24px;
+    // padding: 120px 177px 110px 177px;
+    padding: 120px 90px 90px 130px;
+    box-sizing: border-box;
+
+    transition: all 0.5s ease;
+
+    &.active {
+      left: 0;
+    }
+
+    &__info {
+      @include s.d-flex($direction: row, $align: end, $justify: space-between);
+      margin-top: 47px;
+      gap: 71px;
+      &-image {
+        max-width: 409px;
+        max-height: 700px;
+        background: rgba(255, 255, 255, 0.8);
+        border: 1px solid s.$color__black;
+
+        @include s.d-flex($direction: column, $align: center);
+        gap: 69px;
+
+        padding: 152px 12px 52px 12px;
+
+        & .hero__text-title {
+          max-width: 380px;
+          h1 {
+            font-size: 60px;
+          }
+          p {
+            font-size: 14px;
+          }
+        }
+      }
+      &-text {
+        max-width: 1022px;
+        @include s.d-flex($direction: column);
+        gap: 42px;
+        h1 {
+          font-weight: 400;
+          // font-size: 36px;
+          font-size: 26px;
+          text-transform: uppercase;
+        }
+        ul {
+          @include s.d-flex($direction: column);
+          gap: 28px;
+          list-style: disc;
+          li {
+            padding-left: 58px;
+            h2 {
+              font-weight: 400;
+              // font-size: 24px;
+              font-size: 20px;
+              text-transform: uppercase;
+              color: s.$color__white;
+              margin-bottom: 28px;
+            }
+            p {
+              font-weight: 600;
+              // font-size: 18px;
+              font-size: 16px;
+              line-height: 1.66667;
+              text-transform: uppercase;
+              color: s.$color__white;
+              span {
+                color: s.$color__gold;
+              }
+            }
+          }
+        }
+      }
+    }
+    hr {
+      border: 1px solid rgba(255, 255, 255, 0.25);
+
+      width: 100%;
+    }
+    &__back {
+      margin-top: 12px;
+      background: transparent;
+      border: none;
+      @include s.d-flex($direction: row, $align: center);
+      gap: 38px;
+      p {
+        font-weight: 600;
+        font-size: 20px;
+        letter-spacing: 0.45em;
+        text-transform: uppercase;
+        color: s.$color__gold;
+
+        transition: color 0.5s ease;
+      }
+      svg {
+        fill: none;
+        stroke: s.$color__gold;
+        width: 135px;
+        height: 22px;
+
+        transition: stroke 0.5s ease;
+      }
+      &:hover {
+        p {
+          color: s.$color__white;
+        }
+        svg {
+          stroke: s.$color__white;
+        }
+      }
+    }
+  }
+  // ------------------- 1920 -----------------
+  @media (min-width: s.$media_1920) {
+    gap: 34px;
+    padding: 120px 177px 110px 177px;
+
+    &__info {
+      &-text {
+        h1 {
+					margin-left: 58px;
+          font-size: 36px;
+        }
+        ul {
+          li {
+            h2 {
+              font-size: 24px;
+            }
+            p {
+              font-size: 18px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

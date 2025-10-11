@@ -1,19 +1,5 @@
 @use "../../base/globals.scss" as s;
 
-.modal-mob {
-  // ------------------- 1440 -----------------
-  @media (min-width: s.$media_1440) {
-    display: none;
-  }
-}
-.modal-desk {
-  display: none;
-  // ------------------- 1440 -----------------
-  @media (min-width: s.$media_1440) {
-    display: flex;
-  }
-}
-
 .services-modal {
   z-index: 120;
 
