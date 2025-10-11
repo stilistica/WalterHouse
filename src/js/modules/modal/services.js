@@ -41,8 +41,6 @@ const modalCloseServices = modalServices.querySelector(
 if (itemsServices && modalServices) {
   itemsServices.forEach((item, index) => {
     item.addEventListener("click", () => {
-      // modalServices.style.top =  window.scrollY + "px";
-
       modalTitleServices.textContent = servicesArr[index].title;
       modalDescServices.textContent = servicesArr[index].description;
 
@@ -57,6 +55,12 @@ if (itemsServices && modalServices) {
       document.body.style.overflow = "";
     });
   }
+  window.addEventListener("resize", () => {
+    if (modalServices.classList.contains("active")) {
+      modalServices.classList.remove("active");
+      document.body.style.overflow = "";
+    }
+  });
 }
 
 const modalServicesDesk = document.querySelector(".modal-desk .services-modal");
@@ -70,15 +74,18 @@ const modalDescServicesDesk = modalServicesDesk.querySelector(
 const modalCloseServicesDesk = modalServicesDesk.querySelector(
   ".services-modal__close"
 );
+
 if (itemsServices && modalServicesDesk) {
   itemsServices.forEach((item, index) => {
     item.addEventListener("click", () => {
-      // modalServices.style.top =  window.scrollY + "px";
-
       modalTitleServicesDesk.textContent = servicesArr[index].title;
       modalDescServicesDesk.textContent = servicesArr[index].description;
 
       modalServicesDesk.classList.add("active");
+
+      setTimeout(() => {
+        modalServicesDesk.classList.remove("active");
+      }, 60000);
     });
   });
 
@@ -87,4 +94,11 @@ if (itemsServices && modalServicesDesk) {
       modalServicesDesk.classList.remove("active");
     });
   }
+
+  window.addEventListener("resize", () => {
+    if (modalServices.classList.contains("active")) {
+      modalServices.classList.remove("active");
+      document.body.style.overflow = "";
+    }
+  });
 }
