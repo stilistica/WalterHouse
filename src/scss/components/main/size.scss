@@ -96,6 +96,10 @@
             color: s.$color__white;
 
             transition: background 0.5s ease;
+
+            &:hover {
+              background: rgba(255, 255, 255, 0.45);
+            }
           }
           h3 {
             font-family: s.$font__br;
@@ -106,10 +110,13 @@
             color: s.$color__white;
             transition: color 0.5s ease;
           }
-          &:hover {
-            p {
-              background: rgba(255, 255, 255, 0.45);
+
+          &.active {
+            h3 {
+              color: s.$color__gold;
             }
+          }
+          &:hover {
             h3 {
               color: s.$color__gold;
             }
@@ -127,6 +134,7 @@
           }
 
           transition: border-color 0.5s ease;
+
           &.active {
             border-color: s.$color__gold;
           }
