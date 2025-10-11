@@ -15,3 +15,4 @@ if (btnsSize && hoverSize) {
 		})
 	})
 }
+

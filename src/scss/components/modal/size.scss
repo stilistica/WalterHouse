@@ -1,0 +1,114 @@
+@use "../../base/globals.scss" as s;
+
+.size-modal {
+  z-index: 120;
+
+  position: fixed;
+
+  right: -100%;
+  top: 0;
+
+  height: 100vh;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 60px 20px 24px 20px;
+
+  overflow-y: auto;
+  background: s.$color__white;
+
+  display: block;
+
+  transition: all 0.5s ease;
+
+  &.active {
+    right: 0;
+  }
+	
+  &__info {
+    height: 100%;
+    box-sizing: border-box;
+    @include s.d-flex($direction: column);
+    gap: 20px;
+    &-title {
+      font-family: s.$font__br;
+      font-weight: 400;
+      font-size: 20px;
+      color: #333;
+      span {
+        text-transform: uppercase;
+        color: s.$color__gold;
+      }
+    }
+    hr {
+      width: 100%;
+      border: 1px solid rgba(0, 0, 0, 0.15);
+    }
+    &-desc {
+      @include s.d-flex($direction: column);
+      gap: 25px;
+      p {
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 1.71429;
+        color: s.$color__black;
+      }
+      ul {
+        margin-bottom: 24px;
+        @include s.d-flex($direction: column);
+        gap: 18px;
+        li {
+          position: relative;
+          padding-left: 30px;
+
+          font-weight: 400;
+          font-size: 14px;
+          line-height: 1.42857;
+          color: s.$color__black;
+
+          &::before {
+            content: "";
+            position: absolute;
+
+            background: s.$color__gold;
+            width: 10px;
+            height: 10px;
+            left: 0;
+            top: 10px;
+
+            border-radius: 50%;
+          }
+        }
+      }
+    }
+  }
+  // ------------------- 768 -----------------
+  @media (min-width: s.$media_768) {
+    padding: 160px 136px 140px 136px;
+
+    &__info {
+      gap: 30px;
+      &-title {
+        font-size: 24px;
+      }
+      &-desc {
+        gap: 45px;
+        p {
+          font-size: 16px;
+          line-height: 1.875;
+        }
+        ul {
+          margin-bottom: 140px;
+
+          @include s.d-flex($direction: column);
+          gap: 25px;
+          li {
+            padding-left: 40px;
+
+            font-size: 16px;
+            line-height: 1.25;
+          }
+        }
+      }
+    }
+  }
+}
