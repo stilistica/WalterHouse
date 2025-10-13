@@ -1,0 +1,183 @@
+@use "../../base/globals.scss" as s;
+
+.gallery-slide-1 {
+  &::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.65);
+    pointer-events: none;
+  }
+}
+
+.gallery {
+  z-index: 120;
+
+  position: fixed;
+
+  right: -100%;
+  top: 0;
+
+  height: 100vh;
+  width: 100%;
+
+  // overflow-y: auto;
+  // background: s.$color__white;
+
+  transition: right 0.5s ease;
+
+  &.active {
+    right: 0;
+  }
+  &__close {
+    z-index: 1;
+    position: absolute;
+    background: transparent;
+    border: none;
+    top: 22px;
+    right: 20px;
+    &-desk {
+      display: none;
+    }
+    &-mob {
+      stroke: s.$color__white;
+      width: 21px;
+      height: 21px;
+    }
+  }
+  &-swiper {
+    width: 100%;
+    height: 100vh;
+    & .swiper-wrapper {
+      & .swiper-slide {
+        background-position: center;
+        background-size: cover;
+        position: relative;
+        img {
+          position: absolute;
+          height: 100vh;
+          width: 100%;
+        }
+        &__point-mob {
+          width: 320px;
+          height: 480px;
+          position: relative;
+          margin: auto auto;
+          &-1 {
+            position: absolute;
+            z-index: 1;
+
+            top: calc(122px / 480px * 100%);
+            right: calc(21px / 320px * 100%);
+          }
+          &-2 {
+            position: absolute;
+            z-index: 1;
+
+            top: calc(185px / 480px * 100%);
+            left: calc(120px / 320px * 100%);
+          }
+          &-3 {
+            position: absolute;
+            z-index: 1;
+
+            top: calc(320px / 480px * 100%);
+            left: calc(50px / 320px * 100%);
+          }
+          svg {
+            width: 46px;
+            height: 46px;
+            cursor: pointer;
+            use {
+              --point: #fff;
+              --stroke-1: rgba(255, 255, 255, 0.2);
+              --stroke-2: rgba(255, 255, 255, 0.5);
+
+              transition: all 0.5s ease;
+            }
+            &:hover {
+              use {
+                --point: #ffac30;
+                --stroke-1: rgba(255, 172, 48, 0.2);
+                --stroke-2: rgba(255, 172, 48, 0.5);
+              }
+            }
+          }
+        }
+      }
+    }
+    &__nav {
+      z-index: 10;
+
+      width: 100%;
+      padding: 0 22px;
+      box-sizing: border-box;
+
+      position: absolute;
+      bottom: 20px;
+      left: 0;
+
+      @include s.d-flex(
+        $direction: row,
+        $align: center,
+        $justify: space-between
+      );
+
+      .swiper-button-prev-vip,
+      .swiper-button-next-vip {
+        cursor: pointer;
+
+        svg {
+          width: 22px;
+          height: 29px;
+
+          use {
+            --color1: #fff;
+            transition: all 0.5s ease;
+          }
+        }
+        &:hover {
+          use {
+            --color1: #FFAC30;
+          }
+        }
+      }
+      &-pagination {
+        position: relative;
+        width: 109px;
+        height: 77px;
+        &-current {
+          position: absolute;
+          right: 2px;
+          top: 10px;
+          font-family: s.$font__br;
+          font-weight: 400;
+          font-size: 30px;
+          text-transform: uppercase;
+          text-align: right;
+          color: s.$color__gold;
+        }
+        hr {
+          position: absolute;
+          width: 120px;
+          top: 45px;
+          left: -10px;
+
+          border: 1px solid rgba(255, 255, 255, 0.4);
+          margin: 0;
+          transform: rotate(30deg);
+        }
+        &-total {
+          position: absolute;
+          left: 7px;
+          bottom: 7px;
+          font-family: s.$font__br;
+          font-weight: 400;
+          font-size: 16px;
+          text-transform: uppercase;
+          color: s.$color__white;
+        }
+      }
+    }
+  }
+}
