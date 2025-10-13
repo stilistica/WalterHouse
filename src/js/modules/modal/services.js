@@ -54,6 +54,13 @@ if (itemsServices && modalServices) {
       modalServices.classList.remove("active");
       document.body.style.overflow = "";
     });
+
+    document.addEventListener("keydown", (e) => {
+      if (e.key === "Escape" && modalServices.classList.contains("active")) {
+        modalServices.classList.remove("active");
+        document.body.style.overflow = "";
+      }
+    });
   }
   window.addEventListener("resize", () => {
     if (modalServices.classList.contains("active")) {

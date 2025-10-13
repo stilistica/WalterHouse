@@ -5,7 +5,7 @@
   <link rel="icon" type="image/svg+xml" href="img/logo.svg?v=2" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>WalterHouse</title>
-  <link rel="stylesheet" href="css/style.min.css?_v=20251013183016" />
+  <link rel="stylesheet" href="css/style.min.css?_v=20251013185516" />
 </head>
 
   <body>
@@ -227,13 +227,13 @@
       <div class="swiper-slide gallery-slide-1">
         <picture><source srcset="img/page-3/vip.webp" type="image/webp"><img src="img/page-3/vip.webp" alt="photo" /></picture>
         <div class="swiper-slide__point-mob">
-          <svg class="swiper-slide__point-mob-1">
+          <svg class="swiper-slide__point-mob-1 point-mob">
             <use href="img/sprite.svg#icon-point"></use>
           </svg>
-          <svg class="swiper-slide__point-mob-2">
+          <svg class="swiper-slide__point-mob-2 point-mob">
             <use href="img/sprite.svg#icon-point"></use>
           </svg>
-          <svg class="swiper-slide__point-mob-3">
+          <svg class="swiper-slide__point-mob-3 point-mob">
             <use href="img/sprite.svg#icon-point"></use>
           </svg>
         </div>
@@ -241,13 +241,13 @@
       <div class="swiper-slide gallery-slide-2">
         <picture><source srcset="img/gallery/elite/image-1.webp" type="image/webp"><img src="img/gallery/elite/image-1.webp" alt="photo" /></picture>
         <div class="swiper-slide__point-mob">
-          <svg class="swiper-slide__point-mob-1">
+          <svg class="swiper-slide__point-mob-1 point-mob">
             <use href="img/sprite.svg#icon-point"></use>
           </svg>
-          <svg class="swiper-slide__point-mob-2">
+          <svg class="swiper-slide__point-mob-2 point-mob">
             <use href="img/sprite.svg#icon-point"></use>
           </svg>
-          <svg class="swiper-slide__point-mob-3">
+          <svg class="swiper-slide__point-mob-3 point-mob">
             <use href="img/sprite.svg#icon-point"></use>
           </svg>
         </div>
@@ -255,13 +255,13 @@
       <div class="swiper-slide gallery-slide-3">
         <picture><source srcset="img/gallery/vip/image-1.webp" type="image/webp"><img src="img/gallery/vip/image-1.webp" alt="photo" /></picture>
         <div class="swiper-slide__point-mob">
-          <svg class="swiper-slide__point-mob-1">
+          <svg class="swiper-slide__point-mob-1 point-mob">
             <use href="img/sprite.svg#icon-point"></use>
           </svg>
-          <svg class="swiper-slide__point-mob-2">
+          <svg class="swiper-slide__point-mob-2 point-mob">
             <use href="img/sprite.svg#icon-point"></use>
           </svg>
-          <svg class="swiper-slide__point-mob-3">
+          <svg class="swiper-slide__point-mob-3 point-mob">
             <use href="img/sprite.svg#icon-point"></use>
           </svg>
         </div>
@@ -269,13 +269,13 @@
       <div class="swiper-slide gallery-slide-4">
         <picture><source srcset="img/gallery/extra/image-1.webp" type="image/webp"><img src="img/gallery/extra/image-1.webp" alt="photo" /></picture>
         <div class="swiper-slide__point-mob">
-          <svg class="swiper-slide__point-mob-1">
+          <svg class="swiper-slide__point-mob-1 point-mob">
             <use href="img/sprite.svg#icon-point"></use>
           </svg>
-          <svg class="swiper-slide__point-mob-2">
+          <svg class="swiper-slide__point-mob-2 point-mob">
             <use href="img/sprite.svg#icon-point"></use>
           </svg>
-          <svg class="swiper-slide__point-mob-3">
+          <svg class="swiper-slide__point-mob-3 point-mob">
             <use href="img/sprite.svg#icon-point"></use>
           </svg>
         </div>
@@ -290,7 +290,9 @@
       </div>
 
       <div class="gallery-swiper__nav-pagination">
-        <span class="gallery-swiper__nav-pagination-current current-vip">09</span>
+        <span class="gallery-swiper__nav-pagination-current current-vip"
+          >09</span
+        >
         <hr />
         <span class="gallery-swiper__nav-pagination-total total-vip">04</span>
       </div>
@@ -315,7 +317,28 @@
   </button>
 </div>
 
-    <div class="modal-desk"><div class="list-modal">
+    <div class="modal-mob-only">
+      <div class="info-modal">
+  <button class="info-modal__close">
+    <svg>
+      <use href="img/sprite.svg#icon-close"></use>
+    </svg>
+  </button>
+  <div class="info-modal__info">
+    <h2 class="info-modal__info-title">Styles</h2>
+    <hr />
+    <p class="info-modal__info-desc">
+      Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo
+      ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis
+      dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies
+      nec, pellentesque eu.
+    </p>
+  </div>
+</div>
+
+    </div>
+    <div class="modal-desk">
+      <div class="list-modal">
   <button class="list-modal__close">
     <svg>
       <use href="img/sprite.svg#icon-close"></use>
@@ -354,7 +377,8 @@
     </div>
   </div>
 </div>
-</div>
+
+    </div>
     <div class="modal-mob"><div class="size-modal">
   <button class="services-modal__close">
     <svg>
@@ -805,7 +829,7 @@
         <div class="swiper-pagination-main"></div>
       </div>
     </main>
-    <script defer src="js/main.min.js?_v=20251013183016"></script>
+    <script defer src="js/main.min.js?_v=20251013185516"></script>
   </body>
 </html>
 <!-- <picture><source srcset="img/image.webp" type="image/webp"><img width="150" src="img/image.png" alt="photo" /></picture> -->

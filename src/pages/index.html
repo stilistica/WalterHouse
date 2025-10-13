@@ -7,7 +7,12 @@
     @@include('components/main/component.html', {})
     @@include('components/modal/about.html', {})
     @@include('components/modal/gallery/vip.html', {})
-    <div class="modal-desk">@@include('components/modal/listServices.html', {})</div>
+    <div class="modal-mob-only">
+      @@include('components/modal/infoMob.html', {})
+    </div>
+    <div class="modal-desk">
+      @@include('components/modal/listServices.html', {})
+    </div>
     <div class="modal-mob">@@include('components/modal/size.html', {})</div>
     @@include('components/modal/steps.html', {})
     <div class="modal-mob">@@include('components/modal/services.html', {})</div>
