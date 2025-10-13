@@ -13,7 +13,7 @@ const typesArrSize = [
   },
   {
     name: "vip",
-    price: "200 000",
+    price: "210 000",
   },
   {
     name: "extra",

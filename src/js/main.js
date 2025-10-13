@@ -10,6 +10,7 @@ import "./modules/services.js";
 
 import "./modules/modal/services.js";
 import "./modules/modal/about.js";
+import "./modules/modal/listServices.js";
 import "./modules/modal/steps.js";
 import "./modules/modal/size.js";
 

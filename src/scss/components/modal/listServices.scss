@@ -1,0 +1,148 @@
+@use "../../base/globals.scss" as s;
+
+.list-modal {
+  // ------------------- 1440 -----------------
+  @media (min-width: s.$media_1440) {
+    z-index: 120;
+
+    position: fixed;
+
+    left: -100%;
+    top: 0;
+
+    height: 100vh;
+    width: 100%;
+
+    background: s.$color__white;
+
+    transition: left 0.5s ease;
+
+    &.active {
+      left: 0;
+    }
+
+    &__close {
+      position: absolute;
+      top: 60px;
+      right: 60px;
+      background: transparent;
+      border: none;
+      svg {
+        stroke: rgba(0, 0, 0, 0.15);
+        width: 33px;
+        height: 34.5px;
+
+        transition: stroke 0.5s ease;
+      }
+      &:hover {
+        svg {
+          stroke: rgba(0, 0, 0, 0.25);
+        }
+      }
+    }
+    &__info {
+      box-sizing: border-box;
+      padding: 95px 70px 95px 70px;
+      @include s.d-flex($direction: row);
+      gap: 80px;
+      &-title {
+        position: relative;
+        font-family: s.$font__br;
+        font-weight: 400;
+        font-size: 30px;
+        text-align: center;
+        text-transform: uppercase;
+        color: s.$color__gold;
+
+        padding: 80px;
+        margin: auto 0;
+
+        &::after {
+          content: "";
+          position: absolute;
+          top: 0;
+          left: 20%;
+
+          width: 100%;
+          height: 100%;
+          background: url("../img/page-3/half-colo-list.svg") no-repeat center /
+            contain;
+        }
+      }
+      &-text {
+        min-width: 800px;
+        @include s.d-flex($direction: column);
+        gap: 30px;
+        h3 {
+          font-family: s.$font__br;
+          font-weight: 400;
+          font-size: 20px;
+          color: s.$color__black;
+        }
+        hr {
+          width: 100%;
+          border: 1.5px solid rgba(0, 0, 0, 0.15);
+        }
+        ul {
+          @include s.d-flex($direction: row, $wrap: wrap);
+
+          column-gap: 30px;
+          row-gap: 15px;
+          li {
+            position: relative;
+            padding-left: 50px;
+            width: 350px;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 1.25;
+            color: s.$color__black;
+
+            &::before {
+              content: "";
+              position: absolute;
+
+              background: s.$color__gold;
+              width: 8px;
+              height: 8px;
+              left: 0;
+              top: 7px;
+
+              border-radius: 50%;
+            }
+          }
+        }
+      }
+    }
+  } 
+  // ------------------- 1920 -----------------
+  @media (min-width: s.$media_1920) {
+    &__info {
+      padding: 195px 170px 314px 212px;
+      gap: 130px;
+      &-title {
+        font-size: 36px;
+
+        padding: 100px;
+      }
+      &-text {
+        min-width: 1190px;
+        h3 {
+          font-size: 24px;
+        }
+        ul {
+          column-gap: 70px;
+          row-gap: 30px;
+          li {
+            width: 450px;
+            font-size: 16px;
+
+            &::before {
+              width: 10px;
+              height: 10px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
