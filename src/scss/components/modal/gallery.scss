@@ -135,7 +135,9 @@
       .swiper-button-prev-vip,
       .swiper-button-next-vip {
         cursor: pointer;
-
+        hr {
+          display: none;
+        }
         svg {
           width: 22px;
           height: 29px;
@@ -205,124 +207,282 @@
             display: none;
           }
           &__point-tablet {
-						display: block;
+            display: block;
             width: 768px;
             height: 576px;
             position: relative;
             margin: auto auto;
-            & .point-tablet__1 {
+            & .point-tablet {
               position: absolute;
               z-index: 1;
+              cursor: pointer;
+              &__svg {
+                position: absolute;
+                width: 46px;
+                height: 46px;
 
-              // top: calc(122px / 480px * 100%);
-              // right: calc(21px / 320px * 100%);
+                use {
+                  --point: #fff;
+                  --stroke-1: rgba(255, 255, 255, 0.2);
+                  --stroke-2: rgba(255, 255, 255, 0.5);
+
+                  transition: all 0.5s ease;
+                }
+                &:hover {
+                  use {
+                    --point: #ffac30;
+                    --stroke-1: rgba(255, 172, 48, 0.2);
+                    --stroke-2: rgba(255, 172, 48, 0.5);
+                  }
+                }
+              }
+              &__line-horiz {
+                position: absolute;
+                width: 0;
+                height: 2px;
+                background-color: s.$color__gold;
+
+                transform-origin: left center;
+                transition: width 0.5s, transform 0.5s;
+              }
+              &__line-diag {
+                position: absolute;
+                width: 0;
+                height: 2px;
+                background-color: s.$color__gold;
+
+                transition: width 0.4s, transform 0.5s;
+              }
+              &__text {
+                position: absolute;
+                opacity: 0;
+                transition: opacity 0.3s;
+
+                font-weight: 600;
+                font-size: 14px;
+                line-height: 1.28571;
+              }
+              &__svg-dot {
+                opacity: 0;
+                position: absolute;
+                width: 9px;
+                height: 9px;
+                use {
+                  fill: s.$color__gold;
+                }
+                transition: opacity 0.3s;
+              }
+            }
+
+            & .point-tablet__1 {
+              bottom: calc(120px / 576px * 100%);
+              left: calc(142px / 768px * 100%);
+
+              width: 248px;
+              height: 100px;
+              & .point-tablet__svg {
+                left: 0;
+                bottom: 0;
+              }
+              & .point-tablet__line-horiz {
+                top: 50%;
+                left: 100px;
+              }
+              & .point-tablet__line-diag {
+                transform-origin: left center;
+
+                left: 18px;
+                bottom: 18px;
+                transform: rotate(-20deg);
+              }
+              & .point-tablet__text {
+                width: 148px;
+
+                top: 0;
+                right: 0;
+              }
+              & .point-tablet__svg-dot {
+                right: -2px;
+                top: 46.5%;
+              }
+              &:hover {
+                & .point-tablet__svg {
+                  use {
+                    --point: #ffac30;
+                    --stroke-1: rgba(255, 172, 48, 0.2);
+                    --stroke-2: rgba(255, 172, 48, 0.5);
+                  }
+                }
+                & .point-tablet__line-diag {
+                  width: 87px;
+                }
+                & .point-tablet__line-horiz {
+                  transition-delay: 0.4s;
+                  width: 148px;
+                }
+                & .point-tablet__text {
+                  transition-delay: 0.4s;
+                  opacity: 1;
+                }
+                & .point-tablet__svg-dot {
+                  transition-delay: 0.7s;
+                  opacity: 1;
+                }
+              }
             }
             & .point-tablet__2 {
-              position: absolute;
-              z-index: 1;
+              top: calc(170px / 576px * 100%);
+              left: calc(188px / 768px * 100%);
 
-              // top: calc(185px / 480px * 100%);
-              // left: calc(120px / 320px * 100%);
+              width: 348px;
+              height: 172px;
+              & .point-tablet__svg {
+                left: 0;
+                bottom: 0;
+              }
+              & .point-tablet__line-horiz {
+                top: 50%;
+                left: 95px;
+              }
+              & .point-tablet__line-diag {
+                transform-origin: left center;
+
+                left: 18px;
+                bottom: 18px;
+                transform: rotate(-40deg);
+              }
+              & .point-tablet__text {
+                width: 245px;
+                top: 0;
+                right: 0;
+              }
+              & .point-tablet__svg-dot {
+                right: -2px;
+                top: 48%;
+              }
+              &:hover {
+                & .point-tablet__svg {
+                  use {
+                    --point: #ffac30;
+                    --stroke-1: rgba(255, 172, 48, 0.2);
+                    --stroke-2: rgba(255, 172, 48, 0.5);
+                  }
+                }
+                & .point-tablet__line-diag {
+                  width: 102px;
+                }
+                & .point-tablet__line-horiz {
+                  transition-delay: 0.4s;
+                  width: 253px;
+                }
+                & .point-tablet__text {
+                  transition-delay: 0.4s;
+                  opacity: 1;
+                }
+                & .point-tablet__svg-dot {
+                  transition-delay: 0.7s;
+                  opacity: 1;
+                }
+              }
             }
             & .point-tablet__3 {
-              position: absolute;
-              z-index: 1;
+              top: calc(153px / 576px * 100%);
+              right: calc(135px / 768px * 100%);
 
-              // top: calc(320px / 480px * 100%);
-              // left: calc(50px / 320px * 100%);
+              width: 248px;
+              height: 120px;
+              & .point-tablet__svg {
+                right: 0;
+                top: 0;
+              }
+              & .point-tablet__line-horiz {
+                top: 50%;
+                right: 67px;
+              }
+              & .point-tablet__line-diag {
+                transform-origin: right center;
+                right: 18px;
+                top: 18px;
+                transform: rotate(-40deg);
+              }
+              & .point-tablet__text {
+                width: 178px;
+                bottom: 0;
+                left: 0;
+              }
+              & .point-tablet__svg-dot {
+                left: -2px;
+                top: 48%;
+              }
+              &:hover {
+                & .point-tablet__svg {
+                  use {
+                    --point: #ffac30;
+                    --stroke-1: rgba(255, 172, 48, 0.2);
+                    --stroke-2: rgba(255, 172, 48, 0.5);
+                  }
+                }
+                & .point-tablet__line-diag {
+                  width: 66px;
+                }
+                & .point-tablet__line-horiz {
+                  transition-delay: 0.4s;
+                  width: 178px;
+                }
+                & .point-tablet__text {
+                  transition-delay: 0.4s;
+                  opacity: 1;
+                }
+                & .point-tablet__svg-dot {
+                  transition-delay: 0.7s;
+                  opacity: 1;
+                }
+              }
             }
-            // svg {
-            //   width: 46px;
-            //   height: 46px;
-            //   cursor: pointer;
-            //   use {
-            //     --point: #fff;
-            //     --stroke-1: rgba(255, 255, 255, 0.2);
-            //     --stroke-2: rgba(255, 255, 255, 0.5);
-
-            //     transition: all 0.5s ease;
-            //   }
-            //   &:hover {
-            //     use {
-            //       --point: #ffac30;
-            //       --stroke-1: rgba(255, 172, 48, 0.2);
-            //       --stroke-2: rgba(255, 172, 48, 0.5);
-            //     }
-            //   }
-            // }
           }
         }
       }
       &__nav {
-        z-index: 10;
-
-        width: 100%;
-        padding: 0 22px;
-        box-sizing: border-box;
-
-        position: absolute;
-        bottom: 20px;
-        left: 0;
-
-        @include s.d-flex(
-          $direction: row,
-          $align: center,
-          $justify: space-between
-        );
+        padding: 0 53px;
 
         .swiper-button-prev-vip,
         .swiper-button-next-vip {
-          cursor: pointer;
+          @include s.d-flex($direction: row, $align: center);
+          gap: 10px;
+          hr {
+            display: block;
+            width: 180px;
+            border: 1px solid rgba(255, 255, 255, 0.25);
 
-          svg {
-            width: 22px;
-            height: 29px;
-
-            use {
-              --color1: #fff;
-              transition: all 0.5s ease;
-            }
+            transition: border 0.5s ease;
           }
           &:hover {
-            use {
-              --color1: #ffac30;
+            hr {
+              border: 1px solid rgba(255, 255, 255, 0.35);
             }
           }
         }
         &-pagination {
-          position: relative;
-          width: 109px;
-          height: 77px;
+          width: 163px;
+          height: 110px;
           &-current {
-            position: absolute;
             right: 2px;
             top: 10px;
-            font-family: s.$font__br;
-            font-weight: 400;
-            font-size: 30px;
-            text-transform: uppercase;
-            text-align: right;
-            color: s.$color__gold;
+
+            font-size: 48px;
           }
           hr {
-            position: absolute;
-            width: 120px;
-            top: 45px;
+            width: 184px;
+            top: 60px;
             left: -10px;
 
-            border: 1px solid rgba(255, 255, 255, 0.4);
-            margin: 0;
             transform: rotate(30deg);
           }
           &-total {
-            position: absolute;
-            left: 7px;
+            left: 29px;
             bottom: 7px;
-            font-family: s.$font__br;
-            font-weight: 400;
-            font-size: 16px;
-            text-transform: uppercase;
-            color: s.$color__white;
+
+            font-size: 24px;
           }
         }
       }
