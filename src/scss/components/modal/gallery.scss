@@ -611,8 +611,8 @@
             }
 
             & .point-tablet__1 {
-              top: calc(764px / 1080px * 100%);
-              left: calc(541px / 1920px * 100%);
+              top: calc(600px / 1080px * 100%);
+              left: calc(441px / 1920px * 100%);
 
               width: 248px;
               height: 100px;
@@ -986,6 +986,10 @@
             width: 1920px;
             height: 1080px;
 
+            & .point-tablet__1 {
+              top: calc(764px / 1080px * 100%);
+              left: calc(541px / 1920px * 100%);
+            }
             & .point-tablet__2 {
               top: calc(266px / 1080px * 100%);
               left: calc(352px / 1920px * 100%);
