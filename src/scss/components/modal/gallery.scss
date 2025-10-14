@@ -542,8 +542,10 @@
           }
           &__point-desk {
             display: block;
-            width: 1920px;
-            height: 1080px;
+            // width: 1920px;
+            width: 1440px;
+            // height: 1080px;
+            height: 750px;
             position: relative;
             margin: auto auto;
             & .point-tablet {
@@ -665,8 +667,10 @@
               }
             }
             & .point-tablet__2 {
+              // top: calc(266px / 1080px * 100%);
+              // left: calc(352px / 1920px * 100%);
               top: calc(266px / 1080px * 100%);
-              left: calc(352px / 1920px * 100%);
+              left: calc(252px / 1920px * 100%);
 
               width: 408px;
               height: 176px;
@@ -778,8 +782,10 @@
               left: calc(399px / 1920px * 100%);
             }
             & .point-tablet__5 {
-              top: calc(160px / 1080px * 100%);
-              left: calc(741px / 1920px * 100%);
+              // top: calc(160px / 1080px * 100%);
+              // left: calc(741px / 1920px * 100%);
+              top: calc(190px / 1080px * 100%);
+              left: calc(751px / 1920px * 100%);
             }
             & .point-tablet__6 {
               top: calc(371px / 1080px * 100%);
@@ -905,7 +911,7 @@
                 bottom: 0;
               }
               & .point-tablet__line-horiz {
-                top: 64px;
+                bottom: 64px;
                 right: 102px;
               }
               & .point-tablet__line-diag {
@@ -913,16 +919,16 @@
 
                 right: 18px;
                 bottom: 18px;
-                transform: rotate(42deg);
+                transform: rotate(28deg);
               }
               & .point-tablet__text {
                 width: 142px;
-                top: 0px;
+                top: 20px;
                 left: 0;
               }
               & .point-tablet__svg-dot {
                 left: -2px;
-                top: 60px;
+                bottom: 60px;
               }
               &:hover {
                 & .point-tablet__svg {
@@ -933,7 +939,7 @@
                   }
                 }
                 & .point-tablet__line-diag {
-                  width: 113px;
+                  width: 98px;
                 }
                 & .point-tablet__line-horiz {
                   transition-delay: 0.4s;
@@ -953,7 +959,8 @@
         }
       }
       &__nav {
-        width: 826px;
+        // width: 826px;
+        width: 626px;
         padding: 0 0;
 
         left: calc(228px / 1920px * 100%);
@@ -962,6 +969,39 @@
         .swiper-button-prev-vip,
         .swiper-button-next-vip {
           gap: 12px;
+          hr {
+            // width: 260px;
+            width: 160px;
+          }
+        }
+      }
+    }
+  }
+  // ------------------- 1920 -----------------
+  @media (min-width: s.$media_1920) {
+    &-swiper {
+      & .swiper-wrapper {
+        & .swiper-slide {
+          &__point-desk {
+            width: 1920px;
+            height: 1080px;
+
+            & .point-tablet__2 {
+              top: calc(266px / 1080px * 100%);
+              left: calc(352px / 1920px * 100%);
+            }
+            & .point-tablet__5 {
+              top: calc(160px / 1080px * 100%);
+              left: calc(741px / 1920px * 100%);
+            }
+          }
+        }
+      }
+      &__nav {
+        width: 826px;
+
+        .swiper-button-prev-vip,
+        .swiper-button-next-vip {
           hr {
             width: 260px;
           }
