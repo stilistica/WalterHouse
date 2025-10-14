@@ -6,15 +6,11 @@ const titleList = modalList.querySelector(".list-modal__info-title");
 if (btnOpenList) {
   btnOpenList.forEach((btn, index) => {
     btn.addEventListener("click", () => {
-      // const parentItem = btn.closest(".styles__item");
-      // const title = parentItem.querySelector(".styles__item-title").textContent;
 
       modalList.classList.add("active");
       document.body.style.overflow = "hidden";
 
       titleList.textContent = ["elite", "vip", "extra"][index];
-
-      // titleList.textContent = title;
     });
   });
 }
