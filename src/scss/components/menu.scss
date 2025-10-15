@@ -4,7 +4,8 @@
   z-index: 100;
   width: 100%;
   position: fixed;
-  bottom: -100%;
+  // bottom: -100%;
+  bottom: 0;
   height: 100vh;
   overflow-y: auto;
   backdrop-filter: blur(60px);
@@ -12,10 +13,12 @@
 
   @include s.d-flex($direction: column, $align: center);
 
-  transition: all 0.5s ease;
+  transform: translateY(100%);
+  transition: transform 0.5s ease;
 
   &.active {
-    bottom: 0;
+    // bottom: 0;
+    transform: translateY(0);
   }
   &__nav {
     margin-top: 80px;
@@ -192,7 +195,7 @@
 
       &-item:not(:last-child) {
         border-bottom: 0px;
-				background: none;
+        background: none;
         // border-right: 2px solid transparent;
         // background: linear-gradient(
         //     to bottom,
@@ -205,7 +208,7 @@
       }
 
       &-item {
-				position: relative;
+        position: relative;
         @include s.d-flex($direction: row, $align: center, $justify: center);
         width: 220px;
         height: 250px;
@@ -215,38 +218,37 @@
 
         font-size: 30px;
 
+        &:not(:last-child)::after {
+          content: "";
+          position: absolute;
+          right: 0;
+          top: 0;
+          width: 2px;
+          height: 100%;
+          background: linear-gradient(
+            to bottom,
+            rgba(255, 255, 255, 0) 0%,
+            rgba(255, 255, 255, 1) 50%,
+            rgba(255, 255, 255, 0) 100%
+          );
+          transition: opacity 0.3s ease;
+        }
 
-				&:not(:last-child)::after {
-        content: "";
-        position: absolute;
-        right: 0;
-        top: 0;
-        width: 2px;
-        height: 100%;
-        background: linear-gradient(
-          to bottom,
-          rgba(255, 255, 255, 0) 0%,
-          rgba(255, 255, 255, 1) 50%,
-          rgba(255, 255, 255, 0) 100%
-        );
-        transition: opacity 0.3s ease;
-      }
-
-      &:not(:first-child)::before {
-        content: "";
-        position: absolute;
-        left: 0;
-        top: 0;
-        width: 2px;
-        height: 100%;
-        background: linear-gradient(
-          to bottom,
-          rgba(255, 255, 255, 0) 0%,
-          rgba(255, 255, 255, 1) 50%,
-          rgba(255, 255, 255, 0) 100%
-        );
-        transition: opacity 0.3s ease;
-      }
+        &:not(:first-child)::before {
+          content: "";
+          position: absolute;
+          left: 0;
+          top: 0;
+          width: 2px;
+          height: 100%;
+          background: linear-gradient(
+            to bottom,
+            rgba(255, 255, 255, 0) 0%,
+            rgba(255, 255, 255, 1) 50%,
+            rgba(255, 255, 255, 0) 100%
+          );
+          transition: opacity 0.3s ease;
+        }
 
         &:hover {
           height: 100%;
