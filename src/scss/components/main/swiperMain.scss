@@ -15,7 +15,7 @@
       height: 100vh;
     }
 
-    .swiper-slide.swiper-slide-active{
+    .swiper-slide.swiper-slide-active {
       pointer-events: auto;
       z-index: 2;
     }
@@ -77,6 +77,27 @@
         width: 25px;
         height: 25px;
       }
+    }
+  }
+}
+.main-swiper__nav {
+  display: none;
+  // ------------------- 1440 -----------------
+  @media (min-width: s.$media_1440) {
+    @include s.d-flex($direction: row, $justify: space-between, $align: center);
+    width: 255px;
+    position: absolute;
+    z-index: 89;
+    right: 2px;
+    top: calc(376px / 1080px * 100%) !important;
+
+    transform: rotate(90deg);
+
+    svg {
+      cursor: pointer;
+      --color1: rgba(255, 255, 255, 0.25);
+      height: 30px;
+      width: 30px;
     }
   }
 }
